@@ -1,4 +1,6 @@
 import Student from '../components/Student.jsx'
+import StateHandling from '../components/StateHandling.jsx'
+import ImageManipulation from '../components/ImageManipulation.jsx'
 
 function App() {
 
@@ -38,11 +40,16 @@ const student=[{
       
       {/* Method 2 for single object <Student data={student} /> */}
 
-      {
+      {/*Method 3 for array of objects{
         student.map((element, index)=>(
           <Student data={element} key={index}/>
         ))
-      }
+      } */}
+
+      {/* <StateHandling /> */}
+
+      <ImageManipulation />
+
     </div>
   )
 }
