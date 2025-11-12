@@ -1,54 +1,60 @@
-import Student from '../components/Student.jsx'
-import StateHandling from '../components/StateHandling.jsx'
-import ImageManipulation from '../components/ImageManipulation.jsx'
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import Student from './component/Student'
+import StateHandling from './component/StateHandling'
+import ImageManipulation from './component/ImageManipulation'
 
 function App() {
-
-const student=[{
-  pic:`https://avatars.githubusercontent.com/u/104955330?v=4`,
-  name : "Siddhant Rastogi",
-  roll:"182",
-  branch:"CSE AIML",
-  section:"B",
-  college:"ABES Engineering College"
+const student=
+[{
+  pic:'https://www.flexjobs.com/blog/wp-content/uploads/2022/06/07130847/How-to-Put-Your-Work-Samples-Online.jpg',
+  name:'Rahul Singh',
+  roll:"23434343",
+  branch:"CES-AIML",
+  section:'B',
+  college:'ABES Engineering College'
 },
-{pic:`https://avatars.githubusercontent.com/u/104955330?v=4`,
-  name : "Shaurya Sharma",
-  roll:"172",
-  branch:"CSE AIML",
-  section:"B",
-  college:"ABES Engineering College"
+{
+  pic:'https://www.flexjobs.com/blog/wp-content/uploads/2022/06/07130847/How-to-Put-Your-Work-Samples-Online.jpg',
+  name:'Amit Tomer',
+  roll:"7897878",
+  branch:"CES-AIML",
+  section:'A',
+  college:'ABES Engineering College'
 },
-{pic:`https://avatars.githubusercontent.com/u/104955330?v=4`,
-  name : "Yash Kumar",
-  roll:"202",
-  branch:"CSE AIML",
-  section:"B",
-  college:"ABES Engineering College"
+{
+  pic:'https://www.flexjobs.com/blog/wp-content/uploads/2022/06/07130847/How-to-Put-Your-Work-Samples-Online.jpg',
+  name:'Ansh Tomer',
+  roll:"65432",
+  branch:"CES-AIML",
+  section:'B',
+  college:'ABES Engineering College'
 },
-{pic:`https://avatars.githubusercontent.com/u/104955330?v=4`,
-  name : "Raman Grewal",
-  roll:"182",
-  branch:"CSE AIML",
-  section:"B",
-  college:"ABES Engineering College"
-}]
+{
+  pic:'https://www.flexjobs.com/blog/wp-content/uploads/2022/06/07130847/How-to-Put-Your-Work-Samples-Online.jpg',
+  name:'Vikky',
+  roll:"89899",
+  branch:"CES-AIML",
+  section:'B',
+  college:'ABES Engineering College'
+}
+]
 
   return (
     <div>
-      {/* Method 1 <Student name = "Siddhant Rastogi" roll="182" branch="CSE AIML" section="B" college="ABES Engineering College"/> */}
-      
-      {/* Method 2 for single object <Student data={student} /> */}
+     {/* <Student name="Rahul Kumar" roll="35466" branch="CSE AIML" section="B" college="ABES Engineering College" /> */}
+    {/* <Student data={student[1]} /> */}
 
-      {/*Method 3 for array of objects{
-        student.map((element, index)=>(
-          <Student data={element} key={index}/>
-        ))
-      } */}
-
-      {/* <StateHandling /> */}
-
-      <ImageManipulation />
+    {/* {
+      student.map((ele,index)=>(
+       <Student data={ele} key={index} />
+      ))
+    } */}
+    
+   {/* <StateHandling /> */}
+   <ImageManipulation />
 
     </div>
   )
