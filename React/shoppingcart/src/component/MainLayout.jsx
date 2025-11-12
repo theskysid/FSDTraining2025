@@ -1,8 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function MainLayout() {
   return (
-    <div>MainLayout</div>
+    <div>
+      <nav>
+        <Link to='/login'>Login</Link>
+        <Link to='/register'>Register</Link>
+        <Link to='/dashboard'>Dashboard</Link>
+      </nav>
+    </div>
   )
 }
 
