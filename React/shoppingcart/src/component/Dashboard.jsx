@@ -1,24 +1,23 @@
 import React, { useEffect } from 'react'
 
 function Dashboard() {
-  
-  const[counter,setCounter]=React.useState(10);
-  const[pointer,setPointer]=React.useState(100);
+  const[data,setData]=React.useState([]);
 
   useEffect(() => {
-    console.log(counter);
-    console.log(pointer);
-  });
+     async function fetchData(){
+      const serverResponse =await fetch(`https://fakestoreapi.com/products`);
+      const jsonData=await serverResponse.json();
+      setData(jsonData);
+      console.log('Products Data:', jsonData);
+    }
+    fetchData();
+  },[]);
 
   return (
     <div>
-      <div>
-        <h2>Counter={counter}</h2>
-        <h2>Pointer={pointer}</h2>
-      </div>
-
-      <button onClick={()=>{setCounter(counter+1)}}>Counter</button>
-      <button onClick={()=>{setPointer(pointer+1)}}>Pointer</button>
+      {
+        JSON.stringify(data)
+      }
     </div>
   )
 }
